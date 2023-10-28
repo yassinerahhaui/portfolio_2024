@@ -101,7 +101,7 @@ function Contact() {
         {/* Background div for larger screens */}
         {/* bg-[url('../assets/contact-form-background-shapes-2-x.png')]  */}
         <div
-          className={`hidden lg:block bg-cover bg-no-repeat bg-[url('../assets/contact-form-background-shapes-2-x.png')] absolute inset-0`}
+          className={`hidden z-0 lg:block bg-cover bg-no-repeat bg-[url('../assets/contact-form-background-shapes-2-x.png')] absolute inset-0`}
         ></div>
         <div className="flex flex-col px-6 pt-[103px] lg:pt-[142px] lg:px-[435px] lg:pb-[127px]">
           <h2 className="text-white text-[40px] font-bold text-center mb-3">
@@ -112,7 +112,7 @@ function Contact() {
             feature that you need built or a project that needs coding. I’d love
             to help with it!
           </p>
-          <form action="" className="flex flex-col justify-center gap-5">
+          <form action="" method="POST" className="z-10 flex flex-col justify-center gap-5">
             <input
               type="text"
               className="pl-4 py-4 rounded-lg h-12 text-[#172B4D]"
@@ -126,13 +126,13 @@ function Contact() {
             <textarea
               // cols="30"
               // rows="10"
-              className=" z-10 pl-4 pt-4 pr-9 h-40 flex content-start  rounded-lg text-[#B3BAC5]"
+              className="pl-4 pt-4 pr-9 h-40 flex content-start  rounded-lg text-[#B3BAC5]"
               placeholder="Write your message here..."
             ></textarea>
            <div className="flex lg:justify-center">
              <button
                type="submit"
-               className="w-1/2 flex justify-center mb-3 lg:w-36 py-3 px-4 bg-white rounded-lg border-[#6070FF] border text-[#396DF2] font-medium hover:bg-[#6070FF] hover:text-[#FFFFFF] transition-all duration-1000 ease-out active:bg-[#2230D2] active:text-[#FFFFFF] disabled:text-[#5E6C84] disabled:border-[#C1C7D0] hover:scale-110 disabled:bg-[#ffffff] "
+               className="w-1/2 flex justify-center mb-3 lg:w-36 py-3 px-4 bg-white rounded-lg border-[#6070FF] border-2 text-[#396DF2] font-medium hover:bg-[#6070FF] hover:text-[#FFFFFF] transition-all duration-1000 ease-out active:bg-[#2230D2] active:text-[#FFFFFF] disabled:text-[#5E6C84] disabled:border-[#C1C7D0] hover:scale-110 hover:border-blue-800 disabled:bg-[#ffffff] "
              >
                Get in touch
              </button>
