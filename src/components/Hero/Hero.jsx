@@ -140,7 +140,7 @@ const Hero = () => {
             <circle cx="10" cy="10.0956" r="10" fill="#6070FF" />
           </svg>
           <svg
-          className="absolute bottom-[26.85px] right-[120.68px]"
+            className="absolute bottom-[26.85px] right-[120.68px]"
             width="68"
             height="39"
             viewBox="0 0 68 39"

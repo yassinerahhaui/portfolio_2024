@@ -33,7 +33,7 @@ const NavBar = () => {
         <div className="bg-[#6070FF] h-screen w-full mix-blend-multiply fixed font-bold text-3xl backdrop-blur-lg text-white p-3 z-30">
           <div className="inline-block">
             <button onClick={handleNav} className="p-2 absolute right-6 top-3">
-              <Image src={cancel} alt="Cancel button"/>
+              <Image src={cancel} alt="Cancel button" />
             </button>
           </div>
           <nav>
@@ -48,14 +48,14 @@ const NavBar = () => {
                 </a>
               </li>
               <li className="p-4">
-                <a className="cursor-pointer hover:text-gray-400"  onClick={handleNav} href="#About">
+                <a className="cursor-pointer hover:text-gray-400" onClick={handleNav} href="#About">
                   About
                 </a>
               </li>
               <li className="p-4">
                 <a
                   className="cursor-pointer hover:text-gray-400"
-                  href="#Contact"  onClick={handleNav}
+                  href="#Contact" onClick={handleNav}
                 >
                   Contact
                 </a>
@@ -65,9 +65,8 @@ const NavBar = () => {
         </div>
       </div>
       <div
-        className={` h-16 fixed opacity-100  lg:hover:opacity-100 transition-opacity ease-in-out duration-300 inline-block w-full  z-20 lg:shadow-2xl ${
-          showHeader ? "" : "lg:opacity-0"
-        }`}
+        className={` h-16 fixed opacity-100  lg:hover:opacity-100 transition-opacity ease-in-out duration-300 inline-block w-full  z-20 lg:shadow-2xl ${showHeader ? "" : "lg:opacity-0"
+          }`}
       >
         <div className=" bg-white flex items-center justify-between pr-6 pl-3 py-1 lg:px-36 lg:py-4 ">
           <div className="text-center  text-indigo-500 text-lg font-bold leading-tight py-[10px] px-3  ">
