@@ -1,26 +1,7 @@
 "use client"
-import { useEffect, useState } from "react";
+
 
 function Contact() {
-  const [isMobile, setIsMobile] = useState(false); // State to track mobile screen
-
-  // Function to check screen size and set the isMobile state
-  const checkScreenSize = () => {
-    if (window.innerWidth <= 768) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-  };
-
-  // useEffect to run the checkScreenSize function when the component mounts and on window resize
-  useEffect(() => {
-    checkScreenSize();
-    window.addEventListener("resize", checkScreenSize);
-    return () => {
-      window.removeEventListener("resize", checkScreenSize);
-    };
-  }, []);
   return (
     <section id="Contact" className="relative min-h-[100dvh] max-h-max overflow-hidden">
       <div className="w-full relative bg-[#6070FF] h-full rounded-tl-[124px]">
@@ -101,7 +82,7 @@ function Contact() {
         {/* Background div for larger screens */}
         {/* bg-[url('../assets/contact-form-background-shapes-2-x.png')]  */}
         <div
-          className={`hidden z-0 lg:block bg-cover bg-no-repeat bg-[url('../assets/contact-form-background-shapes-2-x.png')] absolute inset-0`}
+          className={`hidden z-0 lg:flex bg-cover bg-no-repeat bg-[url('../assets/contact-form-background-shapes-2-x.png')] absolute inset-0`}
         ></div>
         <div className="flex flex-col px-6 pt-[103px] lg:pt-[142px] lg:px-[435px] lg:pb-[127px]">
           <h2 className="text-white text-[40px] font-bold text-center mb-3">
