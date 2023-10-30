@@ -1,5 +1,5 @@
-"use client"
 
+import FormContact from "./FormContact";
 
 function Contact() {
   return (
@@ -93,32 +93,9 @@ function Contact() {
             feature that you need built or a project that needs coding. I’d love
             to help with it!
           </p>
-          <form action="" method="POST" className="z-10 flex flex-col justify-center gap-5">
-            <input
-              type="text"
-              className="pl-4 py-4 rounded-lg h-12 text-[#172B4D]"
-              placeholder="Lorem Ipsum"
-            />
-            <input
-              type="text"
-              className="pl-4 py-4 rounded-lg h-12 text-[#172B4D]"
-              placeholder="loremipsum@gmail.com"
-            />
-            <textarea
-              // cols="30"
-              // rows="10"
-              className="pl-4 pt-4 pr-9 h-40 flex content-start  rounded-lg text-[#B3BAC5]"
-              placeholder="Write your message here..."
-            ></textarea>
-           <div className="flex lg:justify-center">
-             <button
-               type="submit"
-               className="w-1/2 flex justify-center mb-3 lg:w-36 py-3 px-4 bg-white rounded-lg border-[#6070FF] border-2 text-[#396DF2] font-medium hover:bg-[#6070FF] hover:text-[#FFFFFF] transition-all duration-1000 ease-out active:bg-[#2230D2] active:text-[#FFFFFF] disabled:text-[#5E6C84] disabled:border-[#C1C7D0] hover:scale-110 hover:border-blue-800 disabled:bg-[#ffffff] "
-             >
-               Get in touch
-             </button>
-           </div>
-          </form>
+
+          <FormContact/>
+          
         </div>
       </div>
     </section>
