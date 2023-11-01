@@ -5,26 +5,34 @@ import { formSubmission } from "@/actions/SubmitForm";
 import toast from "react-hot-toast";
 
 import { FormSchema } from "../../../lib/typesForm";
+import { useRef } from "react"
 
 
 
 const FormContact = () => {
+    const ref = useRef<HTMLFormElement>(null)
     const clientAction = async (formData: FormData) => {
+
         const newContact = {
-            name:  formData.get("name"),
+            name: formData.get("name"),
             email: formData.get("email"),
             message: formData.get("message")
+            // name: 525,
+            // email: "ilyass@gmzail.com",
+            // message: "kkjjuujnh"
         }
+
         // client validitaion 
         const result = FormSchema.safeParse(newContact);
+        
+
 
         if (!result.success) {
             let errorMessage = "";
 
-            result.error.issues.forEach((issue, index) => {
-                errorMessage =  issue.message + "."
+            result.error.issues.forEach((issue) => {
+                errorMessage = issue.message + "."
             });
-            console.log(errorMessage)
 
             toast.error(errorMessage);
 
@@ -32,28 +40,32 @@ const FormContact = () => {
         }
         console.log(result.data)
 
-        const response = await formSubmission(result.data)
-        if(response?.error){
-            toast.error(response.error)
-        }
+        // const response = await formSubmission(result.data)
+        // if (response?.error) {
+        //     toast.error(response.error)
+        //     return;
+        // }
 
         toast.success("Successfully sent!")
+        // reset
+        ref.current?.reset()
+
     }
 
     return (
-        <form action={clientAction} className="z-10 flex flex-col justify-center gap-5">
+        <form ref={ref} action={clientAction} className="z-10 flex flex-col justify-center gap-5">
             <input
                 name="name"
                 type="text"
                 className="pl-4 py-4 rounded-lg h-12 text-[#172B4D]"
-                placeholder="Name"
+                placeholder="Your name "
                 required
             />
             <input
                 name="email"
                 type="email"
                 className="pl-4 py-4 rounded-lg h-12 text-[#172B4D]"
-                placeholder="Email"
+                placeholder="Your email"
                 required
             />
             <textarea
