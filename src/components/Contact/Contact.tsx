@@ -3,7 +3,7 @@ import FormContact from "./FormContact";
 
 function Contact() {
   return (
-    <section id="Contact" className="relative min-h-[100dvh] max-h-max overflow-hidden">
+    <section id="Contact" className="relative h-[100dvh] overflow-hidden">
       <div className="w-full relative bg-[#6070FF] h-full rounded-tl-[124px]">
         {/* Background div for mobile screens */}
         <div className="relative lg:hidden">
@@ -82,13 +82,13 @@ function Contact() {
         {/* Background div for larger screens */}
         {/* bg-[url('../assets/contact-form-background-shapes-2-x.png')]  */}
         <div
-          className={`hidden z-0 lg:flex bg-cover bg-no-repeat bg-[url('../assets/contact-form-background-shapes-2-x.png')] absolute inset-0`}
+          className={`hidden z-0 lg:flex  bg-cover bg-no-repeat bg-[url('../assets/contact-form-background-shapes-2-x.png')] absolute inset-0`}
         ></div>
-        <div className="flex flex-col px-6 pt-[103px] lg:pt-[142px] lg:px-[435px] lg:pb-[127px]">
+        <div className="z-[99] flex flex-col px-6 justify-center content-center h-full lg:items-center">
           <h2 className="text-white text-[40px] font-bold text-center mb-3">
             Contact me
           </h2>
-          <p className="text-[#EBEBFF]  font-normal  text-center mb-[52px] ">
+          <p className="text-[#EBEBFF] lg:w-[569px] font-normal text-center mb-3  ">
             If you have an application you are interested in developing, a
             feature that you need built or a project that needs coding. I’d love
             to help with it!
