@@ -39,8 +39,6 @@ export const formSubmission = async (newContact: unknown) => {
   const message = result.data.message
   const senderEmail = result.data.email
 
-
-  
   try {
     await resend.emails.send({
       from: 'Contact From <onboarding@resend.dev>',
@@ -59,8 +57,6 @@ export const formSubmission = async (newContact: unknown) => {
       error: getErrorMessage(error)
     };
   }
-
-
   //  await resend.emails.send({
   //     from: 'Contact From <onboarding@resend.dev>',
   //     to: senderEmail,  // Use the user's email address
